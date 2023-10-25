@@ -1,3 +1,7 @@
+# Project specifics
+env/
+.env
+
 # Logs
 logs
 *.log
