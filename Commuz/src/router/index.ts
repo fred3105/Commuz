@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import FrontPage from '../components/FrontPage.vue';
-import Partenaires from '../components/Partenaires.vue';
+import FrontPage from '../views/FrontPage.vue';
+import Partenaires from '../views/Partenaires.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
