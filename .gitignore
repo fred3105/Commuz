@@ -2,7 +2,6 @@
 environment/
 .env
 .DS_Store
-backend/
 
 # Logs
 logs
