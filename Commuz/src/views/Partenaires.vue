@@ -13,14 +13,14 @@ import Reseaux from '@/components/Reseaux.vue';
     </h2>
     <div class="profile-page">
     <div class="profile">
-      <img src="@/assets/photo/KS.png" alt="Profile 1" class="profile-picture">
+      <img src="@/assets/photo/KS.png" alt="Aleksandra Krivokapic" class="profile-picture">
       <div class="profile-text">
         <h2>Aleksandra Krivokapic </h2>
         <p>07 63 14 07 77</p>
       </div>
     </div>
     <div class="profile">
-      <img src="@/assets/photo/PE.png" alt="Profile 2" class="profile-picture">
+      <img src="@/assets/photo/PE.png" alt="Paul-Etienne Clément" class="profile-picture">
       <div class="profile-text">
         <h2>Paul-Etienne Clément </h2>
         <p>06 80 45 72 32</p>
@@ -62,5 +62,6 @@ h2{
     margin-top: 80px;
     color: white;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
 </style>
