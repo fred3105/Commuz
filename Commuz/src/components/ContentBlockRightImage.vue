@@ -25,6 +25,7 @@
     background-color: black;
     color: white;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
   }
   
   .image-container {

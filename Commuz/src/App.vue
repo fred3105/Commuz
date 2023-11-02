@@ -28,6 +28,7 @@ function retractSidebar() {
       </div>
       <RouterLink to="/" v-show="isSidebarExtended">Commuz</RouterLink>
       <RouterLink to="/Partenaires" v-show="isSidebarExtended">Partenaires</RouterLink>
+      <RouterLink to="/Equipe" v-show="isSidebarExtended">L'Equipe</RouterLink>
       <RouterLink to="/MisterCommuz" v-show="isSidebarExtended">Mister Commuz'</RouterLink>
     </div>
     <div class="content">
