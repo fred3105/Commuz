@@ -1,7 +1,8 @@
 # Project specifics
-env/
+environment/
 .env
 .DS_Store
+backend/
 
 # Logs
 logs
@@ -159,4 +160,7 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+.DS_Store
+.DS_Store
+*.pyc
 .DS_Store
