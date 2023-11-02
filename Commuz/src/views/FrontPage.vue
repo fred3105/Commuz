@@ -1,13 +1,22 @@
 <script setup lang="ts">
-import ContentBlock from '../components/ContentBlockLeft.vue';
+import ContentBlockLeft from '@/components/ContentBlockLeftImage.vue';
+import ContentBlockRight from '@/components/ContentBlockRightImage.vue';
+import Partenaires from '@/components/Partenaires.vue';
+import Reseaux from '@/components/Reseaux.vue';
+import { ref } from 'vue';
 
-const contentBlocks = [
-  {
-    backgroundImage: 'front-bloc-1.jpg',
-    title: 'Une comédie musicale 100% étudiante',
-    paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  }
-];
+const contentBlocks = ref([
+      {
+        backgroundImage: 'front-bloc-1.jpg',
+        title: 'Un voyage musical et artistique',
+        paragraph: 'Lorem Ipsum'
+      },
+      {
+        backgroundImage: 'front-bloc-2.jpg',
+        title: "L'Ecole de Management de Lyon et L'Ecole Centrale de Lyon",
+        paragraph: 'Lorem Ipsum'
+      }
+]);
 </script>
 
 <template>
@@ -18,13 +27,14 @@ const contentBlocks = [
       Your browser does not support the video tag.
     </video>
   </div>
-  <content-block
-      v-for="(block, index) in contentBlocks"
-      :key="index"
-      :background-image="block.backgroundImage"
-      :title="block.title"
-      :paragraph="block.paragraph"
-    />
+
+  <template v-for="(block, index) in contentBlocks" :key="index">
+      <component v-if="index % 2 === 0" :is="ContentBlockLeft" :background-image="block.backgroundImage" :title="block.title" :paragraph="block.paragraph" />
+      <component v-else :is="ContentBlockRight" :background-image="block.backgroundImage" :title="block.title" :paragraph="block.paragraph" />
+  </template>
+
+  <Partenaires/>
+  <Reseaux/>
 </template>
 
 <style>
@@ -50,3 +60,4 @@ const contentBlocks = [
   height: 100%;
 }
 </style>
+
