@@ -43,7 +43,7 @@ function retractSidebar() {
   position: fixed;
   left: 0;
   top: 0;
-  height: 100vh;
+  height: 200vh;
   background: #000000;
   color: #ffffff;
   padding: 1rem;
