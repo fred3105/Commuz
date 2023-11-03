@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import FrontPage from '../views/FrontPage.vue';
+import Spectacle from '../views/Spectacle.vue';
 import Partenaires from '../views/Partenaires.vue';
 import MisterCommuz from '../views/MisterCommuz.vue';
 import Equipe from '../views/Equipe.vue'
@@ -11,6 +12,10 @@ const router = createRouter({
       path: '/',
       component: FrontPage
     }, 
+    {
+      path: '/spectacle',
+      component: Spectacle
+    },
     {
       path: '/partenaires',
       component: Partenaires

@@ -9,7 +9,8 @@ const contentBlocks = ref([
       {
         backgroundImage: 'front-bloc-1.jpg',
         title: 'Un voyage musical et artistique',
-        paragraph: 'Chaque année la commuz réunis 1200 spectateurs pour vous proposer un spectacle à travers les âges. Au programme: histoire originale, chorégraphies, orchestre, danses, costumes et choeurs.'
+        paragraph1: 'Chaque année la commuz réunis 1200 spectateurs pour vous proposer un spectacle à travers les âges.',
+        paragraph2: 'Au programme: histoire originale, chorégraphies, orchestre, danses, costumes et choeurs.'
       },
       {
         backgroundImage: 'pascal.jpg',
@@ -19,7 +20,8 @@ const contentBlocks = ref([
       {
         backgroundImage: 'front-bloc-2.jpg',
         title: "Un partenariat entre l'Ecole de Management de Lyon et l'Ecole Centrale de Lyon",
-        paragraph: "C'est plus de 80 étudiants qui viennent présenter leurs talents devant vous. Après plusieurs mois de préparation, les scénaristes, les chorégraphes, l'éclairage, la sonorisation, les costumiers, les décors et les acteurs prennent place pour donner vie à la scène, le temps d'une représenation."
+        paragraph1: "C'est plus de 80 étudiants qui viennent présenter leurs talents devant vous.",
+        paragraph2: "Après plusieurs mois de préparation, les scénaristes, les chorégraphes, l'éclairage, la sonorisation, les costumiers, les décors et les acteurs prennent place pour donner vie à la scène, le temps d'une représenation."
       },
       {
         backgroundImage: 'debouk.jpg',
@@ -39,7 +41,7 @@ const contentBlocks = ref([
   </div>
 
   <template v-for="(block, index) in contentBlocks" :key="index">
-      <component v-if="index % 2 === 0" :is="ContentBlockLeft" :background-image="block.backgroundImage" :title="block.title" :paragraph="block.paragraph" />
+      <component v-if="index % 2 === 0" :is="ContentBlockLeft" :background-image="block.backgroundImage" :title="block.title" :paragraph1="block.paragraph1" :paragraph2="block.paragraph2" />
       <component v-else :is="ContentBlockRight" :background-image="block.backgroundImage" :title="block.title" :paragraph="block.paragraph" />
   </template>
 

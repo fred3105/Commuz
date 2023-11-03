@@ -5,7 +5,9 @@
     </div>
     <div class="text-container">
       <h2>{{ title }}</h2>
-      <p>{{ paragraph }}</p>
+      <p>{{ paragraph1 }}</p>
+      <br>
+      <p>{{ paragraph2 }}</p>
     </div>
   </div>
 </template>
@@ -14,18 +16,41 @@
 const props = defineProps({
   backgroundImage: String,
   title: String,
-  paragraph: String
+  paragraph1: String,
+  paragraph2: String,
 });
 </script>
   
+  
 <style scoped>
 .content-block {
-  display: flex;
-  align-items: center;
-  background-color: black;
-  color: white;
+  position: relative;
+  height:600px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.text-container {
   font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke; /* Background color for text container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  transition: 0.4s ease; 
   font-size: 20px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.content-block:hover .text-container {
+  opacity: 1; /* Show the text container on hover */
 }
 
 .image-container {
@@ -34,18 +59,15 @@ const props = defineProps({
 }
 
 .background-image {
-  width: 100%;
-  height: auto;
-}
-
-.text-container {
-  flex: 1;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 1); /* Semi-transparent white background for text */
+  position: absolute;
+  left: -5%;
+  top: -40%;
+  width: 100%
 }
 
 h2 {
   font-size: 34px;
   margin-bottom: 10px;
 }
+
 </style>

@@ -6,9 +6,7 @@ import Reseaux from '@/components/Reseaux.vue';
 <template>
     <h2>
         Nos responsables partenaires sont à votre écoute, si vous voulez soutenir la Commuz' 
-        <a href="mailto:commuzlyon@gmail.com?subject=Partenariats%20Commuz" class="link">
-            écrivez
-    </a>
+        <a href="mailto:commuzlyon@gmail.com?subject=Partenariats%20Commuz" class="link">écrivez</a>
     ou appelez les!
     </h2>
     <div class="profile-page">
