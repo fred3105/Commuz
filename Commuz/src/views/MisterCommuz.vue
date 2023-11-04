@@ -1,59 +1,67 @@
 <template>
   <div class="container">
     <div class="profile">
-      <img src="@/assets/photo/mister-commuz.jpg" alt="mister-commuz" class="profile-picture"/>
+      <img src="@/assets/photo/mister-commuz.jpg" alt="mister-commuz" class="profile-picture" />
     </div>
     <div class="output-area">{{ outputText }}</div>
     <div class="input-container">
-      <input v-model="inputText" @keyup.enter="sendText" class="input-field" placeholder="Que veux tu savoir sur la commuz?">
+      <input
+        v-model="inputText"
+        @keyup.enter="sendText"
+        class="input-field"
+        placeholder="Que veux tu savoir sur la commuz?"
+      />
       <button @click="sendText" class="send-button">Demander</button>
     </div>
   </div>
 </template>
-  
-<script setup lang="ts">
-import { ref } from 'vue';
 
-const inputText = ref('');
-const outputText = ref('');
-const intermediateResponse = ref('');
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const inputText = ref('')
+const outputText = ref('')
+const intermediateResponse = ref('')
 
 const sendText = async () => {
   // Reset outputText to blank at the beginning of the function
-  outputText.value = '...';
-  intermediateResponse.value = '';
+  outputText.value = '...'
+  intermediateResponse.value = ''
 
   try {
     const response = await fetch('http://127.0.0.1:8000/MisterCommuz', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ input: inputText.value }),
-    });
+      body: JSON.stringify({ input: inputText.value })
+    })
 
-    const reader = response.body.getReader();
+    if (response.body) {
+      const reader = response.body.getReader();
+      const read = async () => {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          intermediateResponse.value += new TextDecoder().decode(value);
+          // Update outputText whenever new data is received
+          outputText.value = intermediateResponse.value;
+        }
+      };
 
-    const read = async () => {
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        intermediateResponse.value += new TextDecoder().decode(value);
-        // Update outputText whenever new data is received
-        outputText.value = intermediateResponse.value;
-      }
-    };
-
-    // Start reading the response in chunks
-    await read();
+      // Start reading the response in chunks
+      await read();
+    } else {
+      // Handle the case where response.body is null
+      console.error('Response body is null');
+    }
   } catch (error) {
     // Handle error
+    console.error('Error:', error);
   }
 };
 </script>
 
-
-  
 <style scoped>
 .profile {
   text-align: center;

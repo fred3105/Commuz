@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import Partenaires from '@/components/Partenaires.vue';
-import Reseaux from '@/components/Reseaux.vue';
-import ClickableComponent from '@/components/ClickableComponent.vue';
+import Partenaires from '@/components/Partenaires.vue'
+import Reseaux from '@/components/Reseaux.vue'
+import ClickableComponent from '@/components/ClickableComponent.vue'
 </script>
 
 <template>
-    <div class="team-presenation">
-        <ClickableComponent
+  <div class="team-presenation">
+    <ClickableComponent
       imageSrc="/image/laptop.png"
       title="Webmaster"
       expandedContent="Le webmaster manie l'informatique pour assurer la billetterie du spectacle et maintenir le site internet de la commuz. "
@@ -20,15 +20,14 @@ import ClickableComponent from '@/components/ClickableComponent.vue';
       imageSrcTeamMember="/image/baptiste.png"
       teammateName="Baptiste"
     />
-    </div>
-    <Partenaires/>
-    <Reseaux/>
+  </div>
+  <Partenaires />
+  <Reseaux />
 </template>
 
 <style>
-
-.team-presentation{
-    color:white;
-    font-family: 'Courier New', Courier, monospace;
+.team-presentation {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 </style>

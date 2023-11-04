@@ -8,15 +8,15 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue'
 
-const showPopup = ref(true);
+const showPopup = ref(true)
 
 const closePopup = () => {
-  showPopup.value = false;
-  sessionStorage.setItem('popupClosed', 'true');
-};
+  showPopup.value = false
+  sessionStorage.setItem('popupClosed', 'true')
+}
 </script>
 
 <style scoped>

@@ -2,30 +2,34 @@
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 
-const isSidebarExtended = ref(false);
+const isSidebarExtended = ref(false)
 
 const toggleSidebar = () => {
-  isSidebarExtended.value = !isSidebarExtended.value;
-};
+  isSidebarExtended.value = !isSidebarExtended.value
+}
 
 function extendSidebar() {
   if (!isSidebarExtended.value) {
-    isSidebarExtended.value = true;
+    isSidebarExtended.value = true
   }
 }
 
 function retractSidebar() {
   if (isSidebarExtended.value) {
-    isSidebarExtended.value = false;
+    isSidebarExtended.value = false
   }
 }
 </script>
 
 <template>
   <div id="app">
-    <div class="sidebar" :style="{ width: isSidebarExtended ? '12%' : '4%' }" @mouseover="extendSidebar" @mouseleave="retractSidebar">
-      <div class="logo" @click="toggleSidebar">
-      </div>
+    <div
+      class="sidebar"
+      :style="{ width: isSidebarExtended ? '12%' : '4%' }"
+      @mouseover="extendSidebar"
+      @mouseleave="retractSidebar"
+    >
+      <div class="logo" @click="toggleSidebar"></div>
       <RouterLink to="/" v-show="isSidebarExtended">Commuz</RouterLink>
       <RouterLink to="/Spectacle" v-show="isSidebarExtended">Spectacle</RouterLink>
       <RouterLink to="/Partenaires" v-show="isSidebarExtended">Partenaires</RouterLink>
@@ -39,7 +43,6 @@ function retractSidebar() {
 </template>
 
 <style>
-
 .sidebar {
   position: fixed;
   left: 0;
@@ -80,12 +83,12 @@ function retractSidebar() {
   width: 95%;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   background-color: black;
 }
-
 </style>
