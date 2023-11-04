@@ -3,6 +3,9 @@
       <h1 class="title">Commuz 2024</h1>
       <div class="info">
         <p><strong>Date:</strong> 8, 9, 10 mars</p>
+        <a class="link" target="_blank" href="https://collecte.io/commuz-2023-billetterie-generale-2418903/fr">
+            Achetez votre place dès maintenant!
+        </a>
         <p>
           Bienvenue dans l'univers magique de notre spectacle musical ! <br>
           Joignez-vous à nous pour une aventure épique remplie de musique envoûtante, 
@@ -10,15 +13,12 @@
           inoubliable où l'imagination rencontre la réalité et où la magie prend vie sur scène. <br> <br>
           Revenez vite pour découvrir le scénario 2024.
         </p>
-        <a class="link" target="_blank" href="https://collecte.io/commuz-2023-billetterie-generale-2418903/fr">
-            Achetez votre place dès maintenant!
-        </a>
       </div>
     </div>
   </template>
   
   <style scoped>
-  /* Add your custom styles here */
+
   .spectacle {
     padding: 20px;
   }

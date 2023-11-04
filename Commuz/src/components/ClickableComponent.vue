@@ -35,11 +35,12 @@
   transition: width 0.3s ease, height 0.3s ease;
   text-align: center;
   margin-top: 5px;
+  margin-left: 10px;
   margin-bottom: 5px;
 }
 
 .clickable-component:hover {
-  height: 430px;
+  height: 450px;
 }
 
   .teammateName{

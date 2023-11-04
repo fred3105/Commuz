@@ -4,6 +4,7 @@
         <img src="@/assets/photo/commuz-masque-logo-gris.png" alt="Commuz Logo" class="logo">
         </div>
         <div class="social-links">
+        <a href="https://open.spotify.com/artist/21oCxFRMiWeCx7X0yXiMdS?si=_T3QZ16zT2KK6ubjQj9yvQ" target="_blank" class="social-link">Spotify</a>
         <a href="https://www.facebook.com/commuzlyon" target="_blank" class="social-link">Facebook</a>
         <a href="https://www.instagram.com/commuzlyon/" target="_blank" class="social-link">Instagram</a>
         <a href="https://www.youtube.com/channel/UCDZ2LRLcQB0MZ6hkB_RNDuQ" target="_blank" class="social-link">YouTube</a>
@@ -46,6 +47,7 @@
     color:black;
     font-family: 'Courier New', Courier, monospace;
     background-color: whitesmoke;
+    height: 400px;
 }
 </style>
   

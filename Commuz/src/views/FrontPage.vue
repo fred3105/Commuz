@@ -3,7 +3,8 @@ import ContentBlockLeft from '@/components/ContentBlockLeftImage.vue';
 import ContentBlockRight from '@/components/ContentBlockRightImage.vue';
 import Partenaires from '@/components/Partenaires.vue';
 import Reseaux from '@/components/Reseaux.vue';
-import { ref } from 'vue';
+import Popup from '@/components/Popup.vue';
+import { ref, onMounted } from 'vue';
 
 const contentBlocks = ref([
       {
@@ -29,6 +30,17 @@ const contentBlocks = ref([
         paragraph: "J'ai pris hier soir un grand plaisir, le spectacle est de grande qualité, son, lumière, costumes magnifiques, décors, le tout au service d'artistes de talents : musiciens, danseurs, chanteurs, acteurs-chanteurs."
       }
 ]);
+
+const showPopup = ref(false);
+
+onMounted(() => {
+  // Check if the popup has been displayed before
+  const popupClosed = sessionStorage.getItem('popupClosed');
+  if (!popupClosed) {
+    // If not displayed before, show the popup and update the local storage
+    showPopup.value = true;
+  }
+});
 </script>
 
 <template>
@@ -47,6 +59,9 @@ const contentBlocks = ref([
 
   <Partenaires/>
   <Reseaux/>
+  <template v-if="showPopup">
+    <Popup/>
+  </template>
 </template>
 
 <style>
