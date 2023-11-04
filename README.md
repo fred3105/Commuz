@@ -1,26 +1,22 @@
 # Commuz
- Showcase Centrale Lyon and EM's Commuz
 
-This template should help get you started developing with Vue 3 in Vite.
+Showcase of Centrale Lyon and EM's Commuz
 
-## Recommended IDE Setup
+Project is already built:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+To run the frontend simply go to the frontend project folder Commuz>Commuz (twice, the second Commuz is the frontend for the project)
 
-## Type Support for `.vue` Imports in TS
+Now simply install serve if you don't have it already and run the build project
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+```rb
+npm install -g serve
+serve -s dist
+```
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+That's it!
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+The backend is harder to run and requires an openAI key, the backend is only necessary for MisterCommuz and will not be explained here.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
