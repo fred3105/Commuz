@@ -2,6 +2,11 @@
 
 Showcase of Centrale Lyon and EM's Commuz
 
+Front is built with Vue 3 
+Back runs with Python:
+- FastApi
+- Llama index
+
 ## Project Setup
 
 ```sh
